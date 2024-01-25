@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: 0 */
 import { fetchPlaceholders } from '../../scripts/aem.js';
 
 function updateActiveSlide(slide) {
@@ -148,19 +149,15 @@ export default async function decorate(block) {
     bindEvents(block);
   }
 
-  // eslint-disable-next-line no-use-before-define
   const el = document.createElement("li");
-  // eslint-disable-next-line no-use-before-define
   el.id = "carousel-filler";
   el.classList.add('carousel-slide');
 
-  // eslint-disable-next-line no-use-before-define
-  document.getElementsByClassName('carousel-slides')[0].insertBefore(el, document.getElementsByClassName('carousel-slides')[0].firstChild);
-  // eslint-disable-next-line no-use-before-define
+  document.getElementsByClassName('carousel-slides')[0].insertBefore(el, document.getElementsByClassName('carousel-slides')[0].firstChild)
   document.getElementsByClassName('carousel-slides')[0].addEventListener('wheel', (e) => {changePosWithScroll(e)});
+  
 }
 
-// eslint-disable-next-line no-use-before-define
 function changePosWithScroll(e){
     e.preventDefault();
     if(e.deltaY > 0) {
