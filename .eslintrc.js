@@ -7,7 +7,8 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {
-    "import/prefer-default-export": 0,
+    "import/prefer-default-export": "off",
+    
     semi: 0,
     
   },
