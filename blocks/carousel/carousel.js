@@ -1,4 +1,3 @@
-/* eslint no-use-before-define: 0 */
 import { fetchPlaceholders } from '../../scripts/aem.js';
 
 function updateActiveSlide(slide) {
@@ -150,7 +149,7 @@ export default async function decorate(block) {
   }
 
   const el = document.createElement("li");
-  el.id = "carousel-filler";
+  el.id = 'carousel-filler';
   el.classList.add('carousel-slide');
 
   document.getElementsByClassName('carousel-slides')[0].insertBefore(el, document.getElementsByClassName('carousel-slides')[0].firstChild)
