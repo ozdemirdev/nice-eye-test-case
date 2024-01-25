@@ -20,7 +20,7 @@
   --text-color: black;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
+  --body-font-family: FSAlbert, FSAlbert-bold;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -187,18 +187,18 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  /* padding: 64px 16px; */
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    /* padding: 64px 32px; */
   }
 }
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    
     margin: auto;
   }
 }
