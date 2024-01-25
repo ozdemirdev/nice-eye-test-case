@@ -114,7 +114,7 @@ export default async function decorate(block) {
     slideIndicatorsNav.setAttribute('aria-label', placeholders.carouselSlideControls || 'Carousel Slide Controls');
     slideIndicators = document.createElement('ol');
     slideIndicators.classList.add('carousel-slide-indicators');
-    slideIndicatorsNav.append(slideIndicators);
+    // eslint-disable-next-line no-use-before-define
     block.append(slideIndicatorsNav);
 
     const slideNavButtons = document.createElement('div');
@@ -148,15 +148,19 @@ export default async function decorate(block) {
     bindEvents(block);
   }
 
+  // eslint-disable-next-line no-use-before-define
   const el = document.createElement("li");
+  // eslint-disable-next-line no-use-before-define
   el.id = "carousel-filler";
   el.classList.add('carousel-slide');
 
-  document.getElementsByClassName('carousel-slides')[0].insertBefore(el, document.getElementsByClassName('carousel-slides')[0].firstChild)
+  // eslint-disable-next-line no-use-before-define
+  document.getElementsByClassName('carousel-slides')[0].insertBefore(el, document.getElementsByClassName('carousel-slides')[0].firstChild);
+  // eslint-disable-next-line no-use-before-define
   document.getElementsByClassName('carousel-slides')[0].addEventListener('wheel', (e) => {changePosWithScroll(e)});
-  
 }
 
+// eslint-disable-next-line no-use-before-define
 function changePosWithScroll(e){
     e.preventDefault();
     if(e.deltaY > 0) {
