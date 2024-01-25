@@ -7,9 +7,12 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {
-    "import/prefer-default-export": "off",
-    
+    // allow reassigning param
     semi: 0,
-    
+    'no-param-reassign': [2, { props: false }],
+    'linebreak-style': ['error', 'unix'],
+    'import/extensions': ['error', {
+      js: 'always',
+    }],
   },
 };
