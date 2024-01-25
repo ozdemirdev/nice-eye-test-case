@@ -10,7 +10,5 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
   },
-  rules: {
-    
-  },
+  rules: {},
 };
