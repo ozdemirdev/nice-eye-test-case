@@ -7,6 +7,6 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {
-    semi: ["error", "always"],
+    semi: 0,
   },
 };
